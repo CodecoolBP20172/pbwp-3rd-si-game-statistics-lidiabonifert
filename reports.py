@@ -52,7 +52,7 @@ def get_line_number_by_title(file_name, title):  # What is the line number of th
     raise ValueError("Game not found!")
 
 
-def create_sorted_list(list, nr):  # To help create a sorted list from the "nr"th elements of the parameter list.
+def create_sorted_list(list, nr):  # To help create a sorted list from the "nr"th elements of the list parameter.
     list_to_sort = []
     for row in list:
         if row[nr] not in list_to_sort:
@@ -78,4 +78,4 @@ def when_was_top_sold_fps(file_name):  # bonus: What is the release date of top 
             sell_nums.append(float(row[1]))
     for row in game_list:
         if float(row[1]) == max(sell_nums):
-            return float(row[2])
+            return int(row[2])
