@@ -15,8 +15,9 @@ def count_games(file_name):  # How many games are in the file?
     return len(game_list)
 
 
-def decide(file_name, year):  # Is there a game from a given year?
+def decide(file_name):  # Is there a game from a given year?
     game_list = open_file(file_name)
+    year = str(input("\nWhich year are you interested in? "))
     year_in_file = False
     for row in game_list:
         if row[2] == str(year):
@@ -35,17 +36,22 @@ def get_latest(file_name):  # Which is the latest game?
             return row[0]
 
 
-def count_by_genre(file_name, genre):  # How many games do we have by genre?
+def count_by_genre(file_name):  # How many games do we have by genre?
     game_list = open_file(file_name)
+    genre = input("\nWhich genre are you interested in? ")
     games_in_genre = 0
     for row in game_list:
         if row[3] == genre:
             games_in_genre += 1
-    return games_in_genre
+    if games_in_genre == 0:
+        raise ValueError
+    else:
+        return games_in_genre
 
 
-def get_line_number_by_title(file_name, title):  # What is the line number of the given title?
+def get_line_number_by_title(file_name):  # What is the line number of the given title?
     game_list = open_file(file_name)
+    title = input("\nWhich game's line number are you interested in? ")
     for game_nr, row in enumerate(game_list):
         if row[0] == title:
             return game_nr + 1
