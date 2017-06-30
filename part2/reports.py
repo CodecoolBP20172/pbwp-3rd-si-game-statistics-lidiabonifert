@@ -54,6 +54,11 @@ def get_date_avg(file_name):  # What is the average of the release dates?
     return round(avg_release)
 
 
+def input_title():
+    user_input = input("\nWhich game are you interested in? ")
+    return user_input
+
+
 def get_game(file_name, title):  # What details are there of the game?
     game_list = open_file(file_name)
     for row in game_list:
@@ -62,6 +67,7 @@ def get_game(file_name, title):  # What details are there of the game?
             row[2] = round(float(row[2]))
             row[4] = row[4].strip("\n")
             return row
+    raise ValueError
 
 
 def count_grouped_by_genre(file_name):  # bonus: How many games are there in the different genres?

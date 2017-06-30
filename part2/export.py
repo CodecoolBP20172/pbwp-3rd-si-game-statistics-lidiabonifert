@@ -20,9 +20,13 @@ with open("report.txt", "w") as export_data:
     export_data.write("The average release date is " + str(reports.get_date_avg(file_name)) + ".\n")
 
     # What details are there of the game?
-    title = "Counter-Strike"
-    export_data.write("All the details of the requested game: " +
-                      str(reports.get_game(file_name, title)) + "\n")
+    try:
+        title = reports.input_title()
+        export_data.write("Everything about " + str(title) + ": " +
+                          str(reports.get_game(file_name, title)) + "\n")
+    except ValueError:
+        print("Game not found!")
+        export_data.write("No game found with the name: " + str(title) + "\n")
 
     # bonus: How many games are there in the different genres?
     export_data.write("The number of games released in each genre: " +

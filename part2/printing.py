@@ -24,12 +24,14 @@ print("\nThe average of release dates is: ")
 pprint(reports.get_date_avg(file_name))
 
 # What details are there of the game?
-title_input = input("\nWhich game are you interested in? ")
-print("\nEverything about " + title_input + ": ")
-if reports.get_game(file_name, title_input) is not None:
+title_input = reports.input_title()
+try:
+    print("\nEverything about " + title_input + ": ")
+    reports.get_game(file_name, title_input)
     pprint(reports.get_game(file_name, title_input))
-else:
-    print("There's no game with that title in the file!")
+except ValueError:
+    print("Game not found!")
+
 
 # bonus: How many games are there in the different genres?
 print("\nThe following number of games are per genre: ")
