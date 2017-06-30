@@ -55,11 +55,12 @@ def get_date_avg(file_name):  # What is the average of the release dates?
 
 
 def input_title():
-    user_input = input("\nWhich game are you interested in? ")
+    user_input = input("Which game are you interested in? ")
     return user_input
 
 
-def get_game(file_name, title):  # What details are there of the game?
+def get_game(file_name):  # What details are there of the game?
+    title = input_title()
     game_list = open_file(file_name)
     for row in game_list:
         if title == row[0]:

@@ -3,6 +3,6 @@ The title of the most played game is Minecraft.
 7.798333333333333 million copies were sold on average.
 The longest title in the file is 52 characters long.
 The average release date is 2003.
-Everything about Terraria: ['Terraria', 12.0, 2011, 'Action-adventure', 'Re-Logic']
-The number of games released in each genre: {'Survival game': 1, 'RPG': 5, 'Simulation': 3, 'First-person shooter': 6, 'Sandbox': 1, 'Action-adventure': 1, 'Real-time strategy': 7}
+Everything about the requested game: ['Counter-Strike', 12.5, 1999, 'First-person shooter', 'Valve Corporation']
+The number of games released in each genre: {'Survival game': 1, 'Sandbox': 1, 'First-person shooter': 6, 'RPG': 5, 'Action-adventure': 1, 'Simulation': 3, 'Real-time strategy': 7}
 All the titles sorted by year of release: ['Diablo III', 'Terraria', 'StarCraft II: Wings of Liberty', 'Minecraft', 'The Sims 3', 'Crysis', "Garry's Mod", 'Guild Wars', 'Counter-Strike: Condition Zero', 'Doom 3', 'Half-Life 2', 'The Sims 2', 'Warhammer 40,000: Dawn of War (including expansions)', 'World of Warcraft', 'Warcraft III: Reign of Chaos', 'Diablo II', 'The Sims', 'Counter-Strike', 'EverQuest', 'Half-Life', 'StarCraft', 'Age of Empires', 'Command & Conquer', 'Populous']
